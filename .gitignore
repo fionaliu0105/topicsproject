@@ -1,10 +1,10 @@
 # Ignore all files in the data folder
-data/*
+#data/*
 
 # ...but do NOT ignore the .gitkeep file
-!data/.gitkeep
+#!data/.gitkeep
 
 # Ignore common R junk
-.Rhistory
-.RData
-.Rproj.user/
+#.Rhistory
+#.RData
+#.Rproj.user/

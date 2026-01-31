@@ -1,0 +1,5 @@
+[1,"Installing 'ggcorrplot' ...\n"]
+[2,"trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/contrib/4.5/ggcorrplot_0.1.4.1.tgz'\n"]
+[1,"The downloaded binary packages are in\n"]
+[1,"\t/var/folders/7r/dc7586_s2w156p_q_829gry40000gn/T//Rtmp6qWoa1/downloaded_packages\n"]
+[2,"Content type 'application/x-gzip' length 29146 bytes (28 KB)\n==================================================\ndownloaded 28 KB\n\n\n\n✔ Package 'ggcorrplot' successfully installed.\n"]
