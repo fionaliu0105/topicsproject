@@ -35,3 +35,14 @@ analyzed_epochs <- all_participants_data |>
     Pupil_Event = PupilChange - Local_Base
   ) |>
   ungroup()
+
+# Plot a few random epochs to check for order
+sliced_epochs |>
+  filter(SubjectID == "998", ClickID %in% 1:3) |>
+  ggplot(aes(x = Time_Rel, y = Pupil_Epoch, color = factor(ClickID))) +
+  geom_line() +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  facet_wrap(~ClickID) +
+  theme_minimal() +
+  labs(title = "Sanity Check: First 3 Epochs for Subject 998",
+       subtitle = "Data should start at -2000 and end at 2000 ms")

@@ -78,6 +78,6 @@ process_subject_data <- function(subj_id) {
 
 subject_list <- c("998", "997", "996", "995") 
 
-all_participants_data <- map_df(subject_list, process_subject_data)
+all_pupil_data <- map_df(subject_list, process_subject_data)
 
-write_csv(all_participants_data, here("data", "combined_cleaned_pupil_data.csv"))
+write_csv(all_pupil_data, here("data", "combined_cleaned_pupil_data.csv"))

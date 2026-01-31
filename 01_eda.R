@@ -1,7 +1,19 @@
 library(tidyverse)
 library(zoo)
 
+## Gaussian Humps ----
+# This creates the clusters of segmentation clicks your advisor requested
+ggplot(all_segments, aes(x = Timestamp)) +
+  geom_density(fill = "steelblue", alpha = 0.4) +
+  geom_rug(aes(color = SubjectID)) + 
+  theme_minimal() +
+  labs(title = "K. 332: Inter-subject Segmentation Agreement",
+       subtitle = "Clusters represent strong consensus on musical boundaries",
+       x = "Time in Song (ms)", y = "Density (Agreement Strength)")
 
+## do participants show peak after the click? ----
+
+## eda ----
 eda_baseline <- all_participants_data |>
   group_by(SubjectID, CurrentObject) |>
   filter(CurrentObject %in% c("SliderInstructions", "SegmentationPlayCollectSlide")) |>
