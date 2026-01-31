@@ -30,13 +30,13 @@ process_subject_data <- function(subj_id) {
       L = suppressWarnings(as.numeric(PupilDiameterLeftEye)),
       R = suppressWarnings(as.numeric(PupilDiameterRightEye)),
       
-      L = ifelse(PupilValidityLeftEye == 1, L, NA),
-      R = ifelse(PupilValidityRightEye == 1, R, NA),
+      L = ifelse(PupilValidityLeftEye == 1, as.numeric(PupilDiameterLeftEye), NA),
+      R = ifelse(PupilValidityRightEye == 1, as.numeric(PupilDiameterRightEye), NA),
       
       PupilAvg = (L + R) / 2,
       PupilAvg = coalesce(PupilAvg, L, R),
       
-      PupilAvg = na.approx(PupilAvg, maxgap = 10, na.rm = FALSE)
+      PupilAvg = na.approx(PupilAvg, maxgap = 15, na.rm = FALSE)
     )
   
   baseline_val <- processed |>
