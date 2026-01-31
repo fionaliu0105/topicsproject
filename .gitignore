@@ -8,3 +8,9 @@
 #.Rhistory
 #.RData
 #.Rproj.user/
+
+# RStudio files
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
