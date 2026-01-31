@@ -24,8 +24,9 @@ all_participants_data |>
 
 # subject 998
 seg_998 <- read_csv(here("data", "Segmentation_Subject9981.txt"), skip = 2, 
-                    col_names = c("ID", "Timestamp")) |>
-  filter(!is.na(as.numeric(ID)))
+                    col_names = c("ID", "Timestamp")) |> 
+  filter(!is.na(as.numeric(ID))) |> 
+  slice(1:18)
 
 ggplot(grand_avg, aes(x = Time_ms, y = Mean_Pupil)) +
   geom_line() +
@@ -33,3 +34,4 @@ ggplot(grand_avg, aes(x = Time_ms, y = Mean_Pupil)) +
              color = "blue", linetype = "dashed", alpha = 0.6) +
   labs(title = "Pupil Dilation vs. Segmentation Events",
        caption = "Dashed lines indicate participant-reported 'New Ideas'")
+
