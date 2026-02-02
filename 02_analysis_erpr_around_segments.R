@@ -1,3 +1,4 @@
+all_pupil_data <- read_csv("data/combined_cleaned_pupil_data.csv")
 
 music_data <- all_participants_data |> 
   filter(CurrentObject == "SegmentationPlayCollectSlide") |>

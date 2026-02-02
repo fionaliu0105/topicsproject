@@ -2,9 +2,9 @@ library(tidyverse)
 library(zoo)
 
 ## Gaussian Humps ----
-# This creates the clusters of segmentation clicks your advisor requested
 ggplot(all_segments, aes(x = Timestamp)) +
-  geom_density(fill = "steelblue", alpha = 0.4) +
+  geom_histogram(fill = "steelblue", alpha = 0.4) +
+  geom_density() + 
   geom_rug(aes(color = SubjectID)) + 
   theme_minimal() +
   labs(title = "K. 332: Inter-subject Segmentation Agreement",
